@@ -34,7 +34,7 @@ class GameScene extends Phaser.Scene {
     this.optionColors = [0x000000, 0xffffff];
 
     this.questionTitle = this.add
-      .text(width / 2, 485, `${this.currentQuestionIndex + 1} سؤال`, {
+      .text(width / 2, 485, `سؤال ${this.currentQuestionIndex + 1}`, {
         fontFamily: "heavyItalic",
         fontSize: " 44px",
         color: "black",
@@ -364,3 +364,4 @@ class GameScene extends Phaser.Scene {
 }
 
 export default GameScene;
+
