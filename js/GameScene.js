@@ -34,10 +34,16 @@ class GameScene extends Phaser.Scene {
     this.optionColors = [0x000000, 0xffffff];
 
     this.questionTitle = this.add
-      .text(width / 2, 485, `سؤال ${this.currentQuestionIndex + 1}`, {
+      .text(width / 2, 485, ` سؤال  ${this.currentQuestionIndex + 1} `, {
         fontFamily: "heavyItalic",
         fontSize: " 44px",
         color: "black",
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 20,
+          right: 20,
+        },
       })
       .setOrigin(0.5);
     this.questionText = this.add
@@ -243,16 +249,16 @@ class GameScene extends Phaser.Scene {
       width * 0.075
     );
 
-    this.timerBg = this.createRoundedRect(70, 215, 210, 85, 42, 0xf2f2f6, 0.9);
-    this.scoreBg = this.createRoundedRect(470, 215, 240, 85, 42, 0xf2f2f6, 0.5);
+    this.timerBg = this.createRoundedRect(70, 215, 210, 85, 42, 0xf2f2f6, 1);
+    this.scoreBg = this.createRoundedRect(470, 215, 240, 85, 42, 0xf2f2f6, 1);
     this.questionBg = this.createRoundedRect(
-      230,
+      220,
       442,
-      320,
+      300,
       85,
       42,
       0xf2f2f6,
-      0.5
+      1
     );
     this.timerIcon = this.add.image(210, 235, "clock").setOrigin(0, 0);
     this.coinIcon = this.add.image(640, 233, "coin").setOrigin(0, 0);
@@ -364,4 +370,3 @@ class GameScene extends Phaser.Scene {
 }
 
 export default GameScene;
-
